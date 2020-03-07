@@ -7,11 +7,11 @@ class F1viewer < Formula
 
   if OS.mac?
     url "https://github.com/SoMuchForSubtlety/f1viewer/releases/download/v1.0.0/f1viewer_1.0.0_macOS_64-bit.tar.gz"
-    sha256 "825d09e479e0ddeac98f3552b6d8cbff6c98fd68dc5e4cb29ff55c1ae7de862a"
+    sha256 "64dfd6e02903fae5826cf280592a2b083574f0ec42bda74a54c301a65aef1ac2"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/SoMuchForSubtlety/f1viewer/releases/download/v1.0.0/f1viewer_1.0.0_linux_64-bit.tar.gz"
-      sha256 "a58815cc6c8cedab4278a056f0345c6fb89abe33fdeace33376c68223bc39777"
+      sha256 "69d9d3e325a3c9f61489e07d333497fc8fcd826f9905288683940e242fdd2848"
     end
   end
   
