@@ -2,16 +2,16 @@
 class F1viewer < Formula
   desc "TUI client for F1TV"
   homepage "https://github.com/SoMuchForSubtlety/f1viewer/"
-  version "1.0.0"
+  version "1.1.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/SoMuchForSubtlety/f1viewer/releases/download/v1.0.0/f1viewer_1.0.0_macOS_64-bit.tar.gz"
-    sha256 "64dfd6e02903fae5826cf280592a2b083574f0ec42bda74a54c301a65aef1ac2"
+    url "https://github.com/SoMuchForSubtlety/f1viewer/releases/download/v1.1.0/f1viewer_1.1.0_macOS_64-bit.tar.gz"
+    sha256 "d4043c1481f961bb76c2c5c2499ed71971c36532b7d8e19dd65f1123803a62cb"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/SoMuchForSubtlety/f1viewer/releases/download/v1.0.0/f1viewer_1.0.0_linux_64-bit.tar.gz"
-      sha256 "69d9d3e325a3c9f61489e07d333497fc8fcd826f9905288683940e242fdd2848"
+      url "https://github.com/SoMuchForSubtlety/f1viewer/releases/download/v1.1.0/f1viewer_1.1.0_linux_64-bit.tar.gz"
+      sha256 "16a69feb1b09d79430044e9b72a993898fcff02cb4ab53995e8449c7454a1d54"
     end
   end
   
