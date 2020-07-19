@@ -15,7 +15,6 @@ class F1viewer < Formula
   end
   
   depends_on "mpv" => :recommended
-  depends_on "vlc" => :recommended  
 
   def install
     bin.install "f1viewer"
