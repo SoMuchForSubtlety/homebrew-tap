@@ -1,20 +1,18 @@
 class F1viewer < Formula
   desc "TUI client for F1TV"
   homepage "https://github.com/SoMuchForSubtlety/f1viewer/"
-  version "1.2.0"
+  version "1.3.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/SoMuchForSubtlety/f1viewer/releases/download/v1.2.0/f1viewer_1.2.0_macOS_64-bit.tar.gz"
-    sha256 "cf43a0d46f490b2f965729ed844470638338dfd6f5bdd2daf46df5afc45c3554"
+    url "https://github.com/SoMuchForSubtlety/f1viewer/releases/download/v1.3.0/f1viewer_1.3.0_macOS_64-bit.tar.gz"
+    sha256 "af5d3788dee97f771e2b9c3a2244baff424c8efa583235daec6347f4c849db8d"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/SoMuchForSubtlety/f1viewer/releases/download/v1.2.0/f1viewer_1.2.0_linux_64-bit.tar.gz"
-      sha256 "8a6e55ba8d3e475a50c1dd7a319aa091ffd0d9ef1af4954f95df5052b1d7cd97"
+      url "https://github.com/SoMuchForSubtlety/f1viewer/releases/download/v1.3.0/f1viewer_1.3.0_linux_64-bit.tar.gz"
+      sha256 "633a41ac55a43ad6a337a40dd946a992bc28cdf2aef0ec9a80c518b7c8f6394a"
     end
   end
-  
-  depends_on "mpv" => :recommended
 
   def install
     bin.install "f1viewer"
