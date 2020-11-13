@@ -1,7 +1,7 @@
 class F1viewer < Formula
   desc "TUI client for F1TV"
   homepage "https://github.com/SoMuchForSubtlety/f1viewer/"
-  version "1.3.0"
+  version "1.4.0"
   bottle :unneeded
 
   if OS.mac?
