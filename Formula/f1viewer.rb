@@ -5,20 +5,28 @@
 class F1viewer < Formula
   desc "TUI client for F1TV"
   homepage "https://github.com/SoMuchForSubtlety/f1viewer/"
-  version "1.5.0"
+  version "2.0.0"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/SoMuchForSubtlety/f1viewer/releases/download/v1.5.0/f1viewer_1.5.0_macOS_amd64.tar.gz"
-    sha256 "f891bff22060f8da8421952309006dafc56123397b8fa36a24f204620a1b2e64"
+    url "https://github.com/SoMuchForSubtlety/f1viewer/releases/download/v2.0.0/f1viewer_2.0.0_macOS_amd64.tar.gz"
+    sha256 "0aa10bd30de92b5f3a1b7f5459d90ef90ddda195aa9faf5627ae22cf2f052427"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/SoMuchForSubtlety/f1viewer/releases/download/v1.5.0/f1viewer_1.5.0_macOS_arm64.tar.gz"
-    sha256 "b90a42d930cef44ffa6c25220dea44996cc53dad10fdb15786994d8184aa69cb"
+    url "https://github.com/SoMuchForSubtlety/f1viewer/releases/download/v2.0.0/f1viewer_2.0.0_macOS_arm64.tar.gz"
+    sha256 "366fe1c41610aa9c8613651f7b7725ed1013e5ed1a19b72f1b233b3e737b677c"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/SoMuchForSubtlety/f1viewer/releases/download/v1.5.0/f1viewer_1.5.0_linux_amd64.tar.gz"
-    sha256 "d587b03712f847a18a1d1ca585af794a1dc6c0d80bf950833ade3029910c459c"
+    url "https://github.com/SoMuchForSubtlety/f1viewer/releases/download/v2.0.0/f1viewer_2.0.0_linux_amd64.tar.gz"
+    sha256 "7e5a3183dd2486f9a4583c8c0f09d72b41a690d349f8f234610e1603ff99c109"
+  end
+  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+    url "https://github.com/SoMuchForSubtlety/f1viewer/releases/download/v2.0.0/f1viewer_2.0.0_linux_armv6.tar.gz"
+    sha256 "a0b404b924d068d823d23612941eba6f536032b077f965d7ffc723ea28d2bfe2"
+  end
+  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+    url "https://github.com/SoMuchForSubtlety/f1viewer/releases/download/v2.0.0/f1viewer_2.0.0_linux_arm64.tar.gz"
+    sha256 "725c9366817e76dae3f3a392fed82cdec360c5ae7adedfe8b1e755cc6e1dcc50"
   end
 
   def install
