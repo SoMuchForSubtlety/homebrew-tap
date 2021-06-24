@@ -5,28 +5,33 @@
 class F1viewer < Formula
   desc "TUI client for F1TV"
   homepage "https://github.com/SoMuchForSubtlety/f1viewer/"
-  version "2.0.1"
+  version "2.1.0"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/SoMuchForSubtlety/f1viewer/releases/download/v2.0.1/f1viewer_2.0.1_macOS_amd64.tar.gz"
-    sha256 "2ba827f167de43ed3937629469782bbcb1fe336b075d0cbb5c7a25a544bf4018"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/SoMuchForSubtlety/f1viewer/releases/download/v2.1.0/f1viewer_2.1.0_macOS_amd64.tar.gz"
+      sha256 "57078111f7396714a9c5e5f33ea30f472eaf0a0173bcb30333a83d16dceaea40"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/SoMuchForSubtlety/f1viewer/releases/download/v2.1.0/f1viewer_2.1.0_macOS_arm64.tar.gz"
+      sha256 "d756a33ec200a5369d7a7cadceb9b85fad3af7b904e8d418d5de0cf9c7f5f31c"
+    end
   end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/SoMuchForSubtlety/f1viewer/releases/download/v2.0.1/f1viewer_2.0.1_macOS_arm64.tar.gz"
-    sha256 "ff85db7d75ef122c8440441be998d8add104c5408090a34da7db14a6c14e181c"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/SoMuchForSubtlety/f1viewer/releases/download/v2.0.1/f1viewer_2.0.1_linux_amd64.tar.gz"
-    sha256 "c9eca1498fa9e57b5a5b24f485e82d41253c83bf5728bce496e316cce2ccd743"
-  end
-  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/SoMuchForSubtlety/f1viewer/releases/download/v2.0.1/f1viewer_2.0.1_linux_armv6.tar.gz"
-    sha256 "b5a33551216c152a6ec3d03ad71e7c2d4909211ce0fbd25b696c029a757350c5"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/SoMuchForSubtlety/f1viewer/releases/download/v2.0.1/f1viewer_2.0.1_linux_arm64.tar.gz"
-    sha256 "1fdf686bee6df343ee7cc4a39c7b02ecaee9644ec217246f98d624ee4078912d"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/SoMuchForSubtlety/f1viewer/releases/download/v2.1.0/f1viewer_2.1.0_linux_amd64.tar.gz"
+      sha256 "e24c28be9e388a7c205043f4b26050b14b159d908f331519c13ff70ffc1a2f15"
+    end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/SoMuchForSubtlety/f1viewer/releases/download/v2.1.0/f1viewer_2.1.0_linux_armv6.tar.gz"
+      sha256 "13b1dbfd6a55ffc1344089b205e34be6892c0065d9d09dd9331b280500697c50"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/SoMuchForSubtlety/f1viewer/releases/download/v2.1.0/f1viewer_2.1.0_linux_arm64.tar.gz"
+      sha256 "29032359280413c6b35c8e1a612a4ff5b7af3421ed90653b070eb11c333bf50e"
+    end
   end
 
   def install
