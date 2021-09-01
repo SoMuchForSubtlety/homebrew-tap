@@ -5,32 +5,32 @@
 class F1viewer < Formula
   desc "TUI client for F1TV"
   homepage "https://github.com/SoMuchForSubtlety/f1viewer/"
-  version "2.2.0"
+  version "2.3.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/SoMuchForSubtlety/f1viewer/releases/download/v2.2.0/f1viewer_2.2.0_macOS_amd64.tar.gz"
-      sha256 "eb85183656fe073130734afb0fbe0021e8da323e11ee959fbd341f5afe09c7dc"
+      url "https://github.com/SoMuchForSubtlety/f1viewer/releases/download/v2.3.0/f1viewer_2.3.0_macOS_amd64.tar.gz"
+      sha256 "be5886368f19ae87d1aa75b3829c8931bba832fba721322fffd415bffc498b0d"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/SoMuchForSubtlety/f1viewer/releases/download/v2.2.0/f1viewer_2.2.0_macOS_arm64.tar.gz"
-      sha256 "a54500be4858dce288ee2aa1ec6ddd16e60ee276c4f1aa188edb40a8c1fc3602"
+      url "https://github.com/SoMuchForSubtlety/f1viewer/releases/download/v2.3.0/f1viewer_2.3.0_macOS_arm64.tar.gz"
+      sha256 "d3607fd45a89c42fefa137efa4d0f8dc1c0b322b781fd97387927c5f9a77996f"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/SoMuchForSubtlety/f1viewer/releases/download/v2.2.0/f1viewer_2.2.0_linux_amd64.tar.gz"
-      sha256 "4a7b2b1e685c9396e0faf6e0873b43d358c5287262776f3db35f2781a9da48dc"
+      url "https://github.com/SoMuchForSubtlety/f1viewer/releases/download/v2.3.0/f1viewer_2.3.0_linux_amd64.tar.gz"
+      sha256 "611116d2608f6c2aaebb54ed08ddaa2c0b85f17cdaf2d5d6407bfffec1da47d5"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/SoMuchForSubtlety/f1viewer/releases/download/v2.2.0/f1viewer_2.2.0_linux_armv6.tar.gz"
-      sha256 "b312f16b5d4d21cf1e1e73347c67ca07689f0bee179772e99e966ef7ac162642"
+      url "https://github.com/SoMuchForSubtlety/f1viewer/releases/download/v2.3.0/f1viewer_2.3.0_linux_armv6.tar.gz"
+      sha256 "8ab7f15666aaf8cc799fec2c7d4bdc9ac00a0b1e681036c3551e3732536aa84c"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/SoMuchForSubtlety/f1viewer/releases/download/v2.2.0/f1viewer_2.2.0_linux_arm64.tar.gz"
-      sha256 "6f4b2da7869c2ba9a543ab4b3e9ae9a6f3946dfd626b02a1dd7df4416ab563ba"
+      url "https://github.com/SoMuchForSubtlety/f1viewer/releases/download/v2.3.0/f1viewer_2.3.0_linux_arm64.tar.gz"
+      sha256 "0a5a6042f7565a17daee50410dd72e6a7672265449e3851c76f279a8850ff8c8"
     end
   end
 
