@@ -6,7 +6,6 @@ class F1viewer < Formula
   desc "TUI client for F1TV"
   homepage "https://github.com/SoMuchForSubtlety/f1viewer/"
   version "2.3.0"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
