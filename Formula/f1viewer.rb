@@ -5,11 +5,11 @@
 class F1viewer < Formula
   desc "TUI client for F1TV"
   homepage "https://github.com/SoMuchForSubtlety/f1viewer/"
-  version "2.4.0"
+  version "2.5.0"
 
   on_macos do
-    url "https://github.com/SoMuchForSubtlety/f1viewer/releases/download/v2.4.0/f1viewer_2.4.0_macOS_all.tar.gz"
-    sha256 "ec06b6b148f4cfe82b7fd84bdb9f94cbee87b9016c7872e5504efc3b2e624b8c"
+    url "https://github.com/SoMuchForSubtlety/f1viewer/releases/download/v2.5.0/f1viewer_2.5.0_macOS_all.tar.gz"
+    sha256 "87e65f78b39a82e1cb1cd4c18d8ee1301f3c591d6f0166800c7d22e3f5caa698"
 
     def install
       bin.install "f1viewer"
@@ -17,25 +17,25 @@ class F1viewer < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/SoMuchForSubtlety/f1viewer/releases/download/v2.4.0/f1viewer_2.4.0_linux_amd64.tar.gz"
-      sha256 "39a4a32f7d178f08a377abeabd4bdbcbd757d1c025092eaa2a3f4456d5bcdc3b"
-
-      def install
-        bin.install "f1viewer"
-      end
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/SoMuchForSubtlety/f1viewer/releases/download/v2.4.0/f1viewer_2.4.0_linux_arm64.tar.gz"
-      sha256 "e72fdb0c3de21a471e3145f59120eabdb062c5d21196ce2532e6412f49c56658"
+      url "https://github.com/SoMuchForSubtlety/f1viewer/releases/download/v2.5.0/f1viewer_2.5.0_linux_arm64.tar.gz"
+      sha256 "56372477477c61c7642615d481b233a353ad3afd95934392dfc8abb1808c460d"
 
       def install
         bin.install "f1viewer"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/SoMuchForSubtlety/f1viewer/releases/download/v2.4.0/f1viewer_2.4.0_linux_armv6.tar.gz"
-      sha256 "bc9d4d4f2dee35aaf541cac6018b7ed50b55ee5b5b227758be5e2f05883f1935"
+      url "https://github.com/SoMuchForSubtlety/f1viewer/releases/download/v2.5.0/f1viewer_2.5.0_linux_armv6.tar.gz"
+      sha256 "dd5f4952535de4fae5753bc5243ebdeaef38d8adeaa8f61b4dc4a78fc8f784a9"
+
+      def install
+        bin.install "f1viewer"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/SoMuchForSubtlety/f1viewer/releases/download/v2.5.0/f1viewer_2.5.0_linux_amd64.tar.gz"
+      sha256 "801439836425dd2b5144cbdfd02da5455f37925d54be60e3d57c9767e21f7955"
 
       def install
         bin.install "f1viewer"
